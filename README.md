@@ -22,7 +22,7 @@ Link to the VM: https://baldur.iti.kit.edu/qpr/QPR_Verify_2020.ova
 	username: qpr
 	password: there is no password (if you need one for example for an easier sudo setup: enter in terminal: passwd, otherwise try password:qprverify)
 
-2) For Ubuntu 18, we provide the binary files together with libariy files for llvm and other dependencies. If you clone these files onto your system and add then to your PATH and LD_LIBRARY_PATH variable you can run QPR Verify on your linux maschine. The viewer for verification results is provided in the folder qpr-report-with-angular-4.
+2) For Ubuntu 18, we provide the binary files together with libariy files for llvm and other dependencies (will soon be pushed). If you clone these files onto your system and add then to your PATH and LD_LIBRARY_PATH variable you can run QPR Verify on your linux maschine. The viewer for verification results is provided in the folder qpr-report-with-angular-4.
 Examples for the variables: 
 
  	PATH=$YOUR-PATH-TO-QPR/QPR-Verify/install/reldeb-gcc/lib/:$PATH
@@ -30,6 +30,18 @@ Examples for the variables:
 	export LD_LIBRARY_PATH=$YOUR-PATH-TO-QPR/QPR-Verify/install/reldeb-gcc/lib
 
 ---
+
+QPR Verify was designed to verify larger projects. The best way to familiarize yourself is to use the VM and follow the instructions to verify the bmi160 project. If you want to test it on a single file "test.c" you should create an empty repository (mkdir QPR) and navigate to that directory (cd QPR). Then you can do as follows: 
+
+	qpr init .. ; qpr add-source-files ../test.c ; qpr murphy ; qpr compile ; qpr check-all-functions-locally 
+
+For more commands and configuration possiblities you should first perform the initalization of an empty folder:
+
+	qpr init ..
+Then you get use the help command to get more information:
+
+	qpr help
+	qpr help configure-project
 
 We give a description how to start working with QPR Verify based on the Virtual Maschine.
 
