@@ -6,15 +6,27 @@ For questions or comments please contact: marko.kleinebuening@kit.edu
 ---
 The publication of the source code of QPR Verify is an ongoing process. 
 
-There are two options to run and test QPR Verify.
+Currently, there are two options to run and test QPR Verify.
 
-1) We provide a Virtual Maschine with QPR-Verify installed. You can either run QPR Verify yourself or look at provided verification results for some benchmarks.
-	Name of BM: QPR_Verify-2020.ova
-	...
+1) We provide a Virtual Maschine with QPR-Verify installed. You can either run QPR Verify yourself or look at provided verification results.
+
+Name of VM:     QPR_Verify-2020.ova --
+Link to the VM: https://baldur.iti.kit.edu/qpr/QPR_Verify_2020.ova
+
+	QPR_Verify-2020.ova was exported from VirtualBox
+	System parameters:
+	OS: 	   Ubuntu 18.04.3 LTS
+	RAM: 	   4096 KB
+	CPU MHz:   2902.482
+	CPU Cores: 1
+	username: qpr
+	password: there is no password (if you need one for example for an easier sudo setup: enter in terminal: passwd, otherwise try password:qprverify)
 
 2) For Ubuntu 18, we provide the binary files together with libariy files for llvm and other dependencies. If you clone these files onto your system and add then to your PATH and LD_LIBRARY_PATH variable you can run QPR Verify on your linux maschine. The viewer for verification results is provided in the folder qpr-report-with-angular-4.
 Examples for the variables: 
+
  	PATH=$YOUR-PATH-TO-QPR/QPR-Verify/install/reldeb-gcc/lib/:$PATH
+	
 	export LD_LIBRARY_PATH=$YOUR-PATH-TO-QPR/QPR-Verify/install/reldeb-gcc/lib
 
 ---
@@ -93,6 +105,7 @@ We give three different ways to perform analysis with QPR-Verify. In general QPR
 -If you have trouble with the QPR-Report, it can be that you have to increase the screen resolution so that you can see all checks.
 -Please do not move the QPR Verify install or Library files. 
 -If you did so anyways you have to adjust the PATH to the qpr executable and eventually also the Path to the libraries needed to run QPR
-	+PATH=~/qpr2020-artefact/QPR-Verify/install/reldeb-gcc/lib/:$PATH (or your now new location)
-	+export LD_LIBRARY_PATH=/home/cav/qpr2020-artefact/QPR-Verify/install/reldeb-gcc/lib (or your now new location)
+
+	PATH=~/qpr2020-artefact/QPR-Verify/install/reldeb-gcc/lib/:$PATH (or your now new location)
+	export LD_LIBRARY_PATH=/home/cav/qpr2020-artefact/QPR-Verify/install/reldeb-gcc/lib (or your now new location)
 
